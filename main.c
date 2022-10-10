@@ -2,11 +2,6 @@
 
 int	main(void)
 {
-	char *ptr;
-
-	ptr = ft_calloc(4, 20);
-	if (!ptr)
-		printf("TEST_SUCCESS");
-	else
-		printf("TEST_FAILED");
+	printf("%s\n", ft_strnstr(((void *)0), "fake", 3));
+	printf("%s\n", strnstr(((void *)0), "fake", 3));
 }
