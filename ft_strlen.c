@@ -2,22 +2,25 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 16:10:26 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/07 16:10:26 by hmesrar          ###   ########.fr       */
+/*                                                    +:+ +:+
+	+:+     */
+/*   By: hmesrar <marvin@42.fr>                     +#+  +:+
+	+#+        */
+/*                                                +#+#+#+#+#+
+	+#+           */
+/*   Created: 2022/10/10 17:37:20 by hmesrar           #+#    #+#             */
+/*   Updated: 2022/10/10 17:37:20 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-    size_t  i;
+	size_t	i;
 
-    i = 0;
-    while(s[i])
-        i++;
-    return (i);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

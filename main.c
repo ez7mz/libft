@@ -1,9 +1,12 @@
 #include "libft.h"
 
-int	main(int argc, char **argv)
+int	main(void)
 {
-	// char s1[] = "hi hmesrFar, are you ok?";
-	// char s2[50] = "-----";
-    (void)argc;
-	printf("original = %d\n", ft_atoi(argv[1]));
+	char *ptr;
+
+	ptr = ft_calloc(4, 20);
+	if (!ptr)
+		printf("TEST_SUCCESS");
+	else
+		printf("TEST_FAILED");
 }

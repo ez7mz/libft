@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:46:09 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/10 17:10:42 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/10 17:13:00 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	tmp_len = ft_strlen(needle);
 	if (needle[0] == '\0')
 		return ((char *)haystack);
+	if (haystack[0] == '\0')
+		return (0);
 	while (haystack[i] && i < len)
 	{
 		if (ft_strncmp(&haystack[i], needle, tmp_len) == 0)
