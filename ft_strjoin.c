@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join = (char *)malloc(len * sizeof(char) + 1);
 	if (!join)
 		return (0);
-	join = ft_strdup(s1);
+	(void)ft_strlcpy(join, s1, ft_strlen(s1) + 1);
 	(void)ft_strlcat(join, s2, len + 1);
 	return (join);
 }

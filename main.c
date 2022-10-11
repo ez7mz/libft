@@ -2,20 +2,15 @@
 
 int	main(void)
 {
-	char	*str = "01234";
-	size_t	size = 10;
-	char	*ret = ft_substr(str, 10, size);
+	char *s1 = "  \t \t \n   \n\n\n\t";
+	char *s2 = "";
+	char *ret = ft_strtrim(s1, " \n\t");
 
-	if (!strncmp(ret, "", 1))
-	{
-		free(ret);
+	printf("%s\n", ret);
+	printf("%s\n", s2);
+	if (ret)
 		printf("TEST_SUCCESS");
-	}
 	else
-	{
-		free(ret);
 		printf("TEST_FAILED");
-	}
-
 	return (0);
 }

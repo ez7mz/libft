@@ -30,6 +30,7 @@ FILES = ft_memset \
 		ft_calloc \
 		ft_substr \
 		ft_strjoin \
+		ft_strtrim \
 		ft_split \
 
 SRCS_DIR = ./

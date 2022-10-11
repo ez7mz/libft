@@ -2,9 +2,12 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
+/*                                                    +:+ +:+
+	+:+     */
+/*   By: hmesrar <marvin@42.fr>                     +#+  +:+
+	+#+        */
+/*                                                +#+#+#+#+#+
+	+#+           */
 /*   Created: 2022/10/07 16:27:47 by hmesrar           #+#    #+#             */
 /*   Updated: 2022/10/07 16:27:47 by hmesrar          ###   ########.fr       */
 /*                                                                            */
@@ -12,13 +15,13 @@
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    char    *str;
-    size_t  i;
+	char	*str;
+	size_t	i;
 
-    i = 0;
-    str = (char *)s;
-    while (i < n)
-        str[i++] = 0;
+	i = 0;
+	str = (char *)s;
+	while (i < n)
+		str[i++] = 0;
 }
