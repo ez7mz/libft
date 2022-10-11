@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:20:34 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/11 14:40:55 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/11 14:52:18 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	is_c(char s_i, char c)
 	return (0);
 }
 
-static	int	len_to_extract(char *s, char c)
+static	int	len_to_extract(char const *s, char c)
 {
 	int	i;
 
@@ -29,7 +29,7 @@ static	int	len_to_extract(char *s, char c)
 	return (i);
 }
 
-static int	count_words(char *s, char c)
+static int	count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -48,7 +48,7 @@ static int	count_words(char *s, char c)
 	return (count);
 }
 
-static char	*extract_word(char *s, char c)
+static char	*extract_word(char const *s, char c)
 {
 	char	*word;
 	int		i;
@@ -68,25 +68,29 @@ static char	*extract_word(char *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**ss;
+	char	**strings;
 	int		i;
 	int		len;
 
 	i = 0;
+	if (!s)
+		return (0);
 	len = count_words(s, c);
-	ss = (char **)malloc(sizeof(char *) * (len + 1));
+	strings = (char **)malloc(sizeof(char *) * (len + 1));
+	if (!strings)
+		return (0);
 	while (*s)
 	{
-		while (*s && in_c(*s, c))
+		while (*s && is_c(*s, c))
 			s++;
 		if (*s)
 		{
-			ss[i] = extract_word(s, c);
+			strings[i] = extract_word(s, c);
 			i++;
 		}
-		while (*s && !in_c(*s, c))
+		while (*s && !is_c(*s, c))
 			s++;
 	}
-	ss[i] = 0;
-	return (ss);
+	strings[i] = 0;
+	return (strings);
 }
