@@ -2,12 +2,20 @@
 
 int	main(void)
 {
-	// printf("%s\n", ft_strnstr(((void *)0), "fake", 3));
-	// printf("%s\n", strnstr(((void *)0), "fake", 3));
+	char	*str = "01234";
+	size_t	size = 10;
+	char	*ret = ft_substr(str, 10, size);
 
-	char hello[100] = "amongus";
+	if (!strncmp(ret, "", 1))
+	{
+		free(ret);
+		printf("TEST_SUCCESS");
+	}
+	else
+	{
+		free(ret);
+		printf("TEST_FAILED");
+	}
 
-	printf("string before memecpy : %s\n",hello);
-	memcpy((hello + 5),hello,strlen(hello) + 1);
-	printf("string after memecpy : %s",hello);
+	return (0);
 }
