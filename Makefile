@@ -43,8 +43,16 @@ FILES = ft_memset \
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
 
+FILES_B = 	ft_lstnew \
+	  		ft_lstadd_front \
+			ft_lstsize \
+			ft_lstlast
+
+SRCS_B = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES_B)))
+
 OBJS_DIR = ./
 OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
+OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
 
 .c.o: $(SRCS)
@@ -55,6 +63,9 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
+bonus: $(OBJS_B)
+	$(AR) $(NAME) $^
+
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
 
@@ -63,7 +74,7 @@ fclean: clean
 
 re: clean all
 
-.PHONY: all clean fclean re
+.PHONY: bonus all clean fclean re
 
 
 # NAME = libft.a
