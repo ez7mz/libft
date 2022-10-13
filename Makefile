@@ -46,7 +46,8 @@ SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
 FILES_B = 	ft_lstnew \
 	  		ft_lstadd_front \
 			ft_lstsize \
-			ft_lstlast
+			ft_lstlast \
+			ft_lstadd_back
 
 SRCS_B = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES_B)))
 
