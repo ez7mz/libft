@@ -2,15 +2,8 @@
 
 int	main(void)
 {
-	char *s1 = "  \t \t \n   \n\n\n\t";
-	char *s2 = "";
-	char *ret = ft_strtrim(s1, " \n\t");
+	char *i1 = ft_itoa((-2147483647 -1));
 
-	printf("%s\n", ret);
-	printf("%s\n", s2);
-	if (ret)
-		printf("TEST_SUCCESS");
-	else
-		printf("TEST_FAILED");
+	printf("%s\n", i1);
 	return (0);
 }
