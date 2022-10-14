@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 15:02:23 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/14 17:09:18 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/14 17:46:09 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*head;
 
 	head = NULL;
-	if (!lst || !f)
+	if (!lst || !f || !del)
 		return (0);
 	while (lst)
 	{
