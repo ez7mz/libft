@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/14 14:21:23 by hmesrar           #+#    #+#              #
+#    Updated: 2022/10/14 15:02:15 by hmesrar          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 CC = gcc
@@ -47,7 +59,11 @@ FILES_B = 	ft_lstnew \
 	  		ft_lstadd_front \
 			ft_lstsize \
 			ft_lstlast \
-			ft_lstadd_back
+			ft_lstadd_back \
+			ft_lstdelone \
+			ft_lstclear \
+			ft_lstiter \
+			ft_lstmap
 
 SRCS_B = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES_B)))
 

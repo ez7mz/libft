@@ -2,8 +2,11 @@
 
 int	main(void)
 {
-	char *i1 = ft_itoa((-2147483647 -1));
+	t_list *l = ft_lstnew(strdup(" 1 2 3 "));
+	t_list *ret;
 
-	printf("%s\n", i1);
+	l->next = ft_lstnew(strdup("ss"));
+	l->next->next = ft_lstnew(strdup("-_-"));
+	ret = ft_lstmap(l, &ft_test, &ft_test2);
 	return (0);
 }
