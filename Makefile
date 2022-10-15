@@ -6,7 +6,7 @@
 #    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 14:21:23 by hmesrar           #+#    #+#              #
-#    Updated: 2022/10/14 15:02:15 by hmesrar          ###   ########.fr        #
+#    Updated: 2022/10/15 22:10:18 by hmesrar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,7 @@ OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
-	echo "$(GREEN)Libft compiled!$(DEF_COLOR)"
+	@echo "$(GREEN) $< compiled! $(DEF_COLOR)"
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
@@ -83,8 +83,8 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 bonus: $(OBJS_B)
-	$(AR) $(NAME) $^
-	echo "$(GREEN)Libft bonus compiled!$(DEF_COLOR)"
+	@$(AR) $(NAME) $^
+	@echo "$(GREEN)Libft bonus compiled!$(DEF_COLOR)"
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
