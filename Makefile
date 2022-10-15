@@ -17,6 +17,7 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 
+SRCS_DIR = ./
 FILES = ft_memset \
 		ft_bzero \
 		ft_memcpy \
@@ -52,7 +53,6 @@ FILES = ft_memset \
 		ft_putendl_fd \
 		ft_putnbr_fd \
 
-SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))
 
 FILES_B = 	ft_lstnew \
@@ -72,16 +72,19 @@ OBJS = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES)))
 OBJS_B = $(addprefix $(OBJS_DIR), $(addsuffix .o, $(FILES_B)))
 
 
-.c.o: $(SRCS)
-	$(CC) $(CFLAGS) -c -o $@ $<
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+	echo "$(GREEN)Libft compiled!$(DEF_COLOR)"
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
+	echo "$(GREEN)Libft Library created!$(DEF_COLOR)"
 
 all: $(NAME)
 
 bonus: $(OBJS_B)
 	$(AR) $(NAME) $^
+	echo "$(GREEN)Libft bonus compiled!$(DEF_COLOR)"
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
@@ -92,6 +95,20 @@ fclean: clean
 re: clean all
 
 .PHONY: bonus all clean fclean re
+
+
+
+#Colors
+DEF_COLOR = \033[0;39m
+GRAY = \033[0;90m
+RED = \033[0;91m
+GREEN = \033[0;92m
+YELLOW = \033[0;93m
+BLUE = \033[0;94m
+MAGENTA = \033[0;95m
+CYAN = \033[0;96m
+WHITE = \033[0;97m
+
 
 
 # NAME = libft.a
