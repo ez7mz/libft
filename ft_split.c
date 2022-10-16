@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:20:34 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/11 14:52:18 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/16 18:04:22 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ static char	*extract_word(char const *s, char c)
 	i = 0;
 	len = len_to_extract(s, c);
 	word = (char *)malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (0);
 	while (i < len)
 	{
 		word[i] = s[i];
