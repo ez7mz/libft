@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:55:50 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/11 21:12:11 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/18 18:39:35 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	left_len(char const *s1, char const *set)
 	int	i;
 
 	i = 0;
-	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
+	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	return (i);
 }
@@ -44,16 +44,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		rstart;
 
-	if (!s1)
+	if (!s1 || !set)
 		return (0);
 	start = left_len(s1, set);
 	rstart = right_len(s1, set);
 	len = ft_strlen(s1) - (start + rstart);
-	if (len < 0)
-		return ("");
-	trim = (char *)malloc(len * sizeof(char) + 1);
-	if (!trim)
-		return (0);
+	if (len <= 0)
+		return (ft_strdup(""));
+	if (start == 0 && rstart == 0)
+		return (ft_strdup(s1));
 	trim = ft_substr(s1, start, len);
 	return (trim);
 }

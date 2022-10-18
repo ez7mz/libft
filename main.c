@@ -1,14 +1,19 @@
 #include "libft.h"
 
-int	main(int argc, char **argv)
+// void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+
+static char ft(unsigned int i, char s)
 {
-	(void)argc;
-	char **tab;
-	tab = ft_split(argv[1], ' ');
-	while (*tab)
-	{
-		printf("%s\n", *tab);
-		tab++;
-	}
+	return (s + i);
+}
+
+int	main()
+{
+	char *s = "hello";
+	char *x = ft_strmapi(s, &ft);
+	printf("\n%s", s);
+	printf("\n%s", x);
+	// while (1)
+	// {}
 	return (0);
 }
