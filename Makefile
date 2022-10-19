@@ -6,7 +6,7 @@
 #    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 14:21:23 by hmesrar           #+#    #+#              #
-#    Updated: 2022/10/20 00:08:22 by hmesrar          ###   ########.fr        #
+#    Updated: 2022/10/20 00:11:10 by hmesrar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,6 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 
-SRCS_DIR = ./
 FILES = ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
@@ -61,9 +60,8 @@ FILES_B = 	ft_lstnew.c \
 			ft_lstdelone.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
-			ft_lstmap
+			ft_lstmap.c
 
-OBJS_DIR = ./
 OBJS = $(FILES:.c=.o)
 OBJS_B = $(FILES_B:.c=.o)
 
