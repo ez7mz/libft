@@ -6,7 +6,7 @@
 #    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 14:21:23 by hmesrar           #+#    #+#              #
-#    Updated: 2022/10/20 00:11:10 by hmesrar          ###   ########.fr        #
+#    Updated: 2022/10/20 17:12:05 by hmesrar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ FILES_B = 	ft_lstnew.c \
 			ft_lstclear.c \
 			ft_lstiter.c \
 			ft_lstmap.c
+
 
 OBJS = $(FILES:.c=.o)
 OBJS_B = $(FILES_B:.c=.o)
