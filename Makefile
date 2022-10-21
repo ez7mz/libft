@@ -6,7 +6,7 @@
 #    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 14:21:23 by hmesrar           #+#    #+#              #
-#    Updated: 2022/10/20 17:12:05 by hmesrar          ###   ########.fr        #
+#    Updated: 2022/10/20 21:30:43 by hmesrar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ FILES_B = 	ft_lstnew.c \
 OBJS = $(FILES:.c=.o)
 OBJS_B = $(FILES_B:.c=.o)
 
-%.o : %.c
+%.o : %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
