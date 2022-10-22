@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:20:34 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/20 00:00:22 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/22 22:42:30 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 static char	**ft_free(char **strings)
 {
-	while (*strings)
+	int	i;
+
+	i = 0;
+	while (strings[i])
 	{
-		free (*strings);
-		strings++;
+		free (strings[i]);
+		i++;
 	}
 	free(strings);
 	return (strings);
