@@ -6,7 +6,7 @@
 #    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 14:21:23 by hmesrar           #+#    #+#              #
-#    Updated: 2022/10/23 00:16:33 by hmesrar          ###   ########.fr        #
+#    Updated: 2022/10/23 21:39:42 by hmesrar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,6 @@ FILES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_memcmp.c 
 
 FILES_B = 	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-
 OBJS = $(FILES:.c=.o)
 OBJS_B = $(FILES_B:.c=.o)
 
@@ -33,7 +32,7 @@ OBJS_B = $(FILES_B:.c=.o)
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
-	@echo "$(GREEN)--> Libft Library created!$(DEF_COLOR)"
+	@echo "\n$(GREEN)--> Libft Library created!$(DEF_COLOR)"
 
 all: $(NAME)
 
@@ -42,20 +41,18 @@ bonus: $(OBJS_B)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
-	@echo "$(RED)--> Objects cleaned successfully!$(DEF_COLOR)"
+	@echo "\n$(RED)--> Objects cleaned successfully!$(DEF_COLOR)"
 
 fclean: clean
 	$(RM) $(NAME)
-	@echo "$(RED)--> Full clean successfully!$(DEF_COLOR)"
+	@echo "\n$(RED)--> Full clean successfully!$(DEF_COLOR)"
 
 re: clean all
-	@echo "$(GREEN)--> Refresh successfully!$(DEF_COLOR)"
+	@echo "\n$(GREEN)--> Refresh successfully!$(DEF_COLOR)"
 
 .PHONY: bonus all clean fclean re
 
-
-
 #Colors
-DEF_COLOR =.c \033[0;39m
-GREEN =.c \033[0;92m
-RED =.c \033[0;91m
+DEF_COLOR =\033[0;39m
+GREEN =\033[0;92m
+RED =\033[0;91m

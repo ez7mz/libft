@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:13:14 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/18 22:40:45 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/23 01:25:33 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (count * size < count || count * size < size)
+	if (count * size < size || size * count < count)
 		return (NULL);
 	ptr = (void *)malloc(count * size);
 	if (!ptr)
