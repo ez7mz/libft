@@ -15,8 +15,5 @@
 
 int	ft_isdigit(int c)
 {
-	unsigned char	cc;
-
-	cc = c;
-	return (cc >= 48 && cc <= 57);
+	return (c >= 48 && c <= 57);
 }

@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 22:10:52 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/11 23:51:04 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/23 22:45:18 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int				n;
-	unsigned char	test;
+	int		n;
+	char	test;
 
 	n = ft_strlen(s) + 1;
 	test = c;

@@ -13,10 +13,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	unsigned char	cc;
-
-	cc = c;
-	return (cc >= 32 && cc <= 126);
+	return (c >= 32 && c <= 126);
 }

@@ -15,8 +15,5 @@
 
 int	ft_isalpha(int c)
 {
-	unsigned char	cc;
-
-	cc = c;
-	return ((cc >= 65 && cc <= 90) || (cc >= 97 && cc <= 122));
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }

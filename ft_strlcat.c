@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 20:52:37 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/16 19:33:58 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/23 22:52:42 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
 	i = 0;
-	if (dstsize == 0 || dstsize <= dst_len)
+	if (dstsize <= dst_len)
 		return (src_len + dstsize);
 	(void)ft_strlcpy(dst + dst_len, src, dstsize - dst_len);
 	return (src_len + dst_len);
