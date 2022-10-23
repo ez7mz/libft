@@ -17,11 +17,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*str;
-	size_t	i;
-
-	i = 0;
-	str = (char *)s;
-	while (i < n)
-		str[i++] = 0;
+	if (n == 0)
+		return ;
+	ft_memset(s, 0, n);
 }
