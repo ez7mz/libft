@@ -17,8 +17,5 @@
 
 int	ft_isalnum(int c)
 {
-	unsigned char	cc;
-
-	cc = c;
-	return (ft_isalpha(cc) || ft_isdigit(cc));
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

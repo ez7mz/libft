@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 21:41:15 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/23 22:40:12 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/24 20:12:07 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 int	ft_toupper(int c)
 {
-	unsigned char	cc;
-
-	cc = c;
-	if (cc >= 97 && cc <= 122)
-		return (cc - 32);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
 	else
-		return (cc);
+		return (c);
 }
