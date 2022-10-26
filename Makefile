@@ -6,7 +6,7 @@
 #    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 14:21:23 by hmesrar           #+#    #+#              #
-#    Updated: 2022/10/23 21:39:42 by hmesrar          ###   ########.fr        #
+#    Updated: 2022/10/26 01:29:56 by hmesrar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,12 +27,12 @@ FILES_B = 	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstla
 OBJS = $(FILES:.c=.o)
 OBJS_B = $(FILES_B:.c=.o)
 
-%.o : %.c libft.h
-	$(CC) $(CFLAGS) -c $< -o $@
-
 $(NAME): $(OBJS)
 	$(AR) $@ $^
 	@echo "\n$(GREEN)--> Libft Library created!$(DEF_COLOR)"
+
+%.o : %.c libft.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 

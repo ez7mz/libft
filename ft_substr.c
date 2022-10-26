@@ -30,6 +30,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub = (char *)malloc(len_to_alloc * sizeof(char) + 1);
 	if (!sub)
 		return (0);
-	(void)ft_strlcpy(sub, s + start, len + 1);
+	(void)ft_strlcpy(sub, s + start, len_to_alloc + 1);
 	return (sub);
 }

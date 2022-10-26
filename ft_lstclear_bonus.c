@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 14:35:21 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/23 00:14:14 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/26 01:39:49 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,12 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!lst || !del)
 		return ;
-	while ((*lst)->next != NULL)
+	while ((*lst) != NULL)
 	{
 		tmp = (*lst)->next;
 		(*del)((*lst)->content);
 		free(*lst);
 		*lst = tmp;
 	}
-	(*del)((*lst)->content);
-	free(*lst);
 	*lst = NULL;
 }
