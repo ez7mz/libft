@@ -6,7 +6,7 @@
 #    By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 14:21:23 by hmesrar           #+#    #+#              #
-#    Updated: 2022/10/26 01:29:56 by hmesrar          ###   ########.fr        #
+#    Updated: 2022/10/28 18:38:10 by hmesrar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ OBJS_B = $(FILES_B:.c=.o)
 
 $(NAME): $(OBJS)
 	$(AR) $@ $^
-	@echo "\n$(GREEN)--> Libft Library created!$(DEF_COLOR)"
+	@echo "\n$(GREEN)--> Libft Library created!\n$(DEF_COLOR)"
 
 %.o : %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -41,14 +41,14 @@ bonus: $(OBJS_B)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
-	@echo "\n$(RED)--> Objects cleaned successfully!$(DEF_COLOR)"
+	@echo "$(RED)--> Objects cleaned successfully!\n$(DEF_COLOR)"
 
 fclean: clean
 	$(RM) $(NAME)
-	@echo "\n$(RED)--> Full clean successfully!$(DEF_COLOR)"
+	@echo "$(RED)--> Full clean successfully!\n$(DEF_COLOR)"
 
-re: clean all
-	@echo "\n$(GREEN)--> Refresh successfully!$(DEF_COLOR)"
+re: fclean all
+	@echo "$(GREEN)--> Refresh successfully!\n$(DEF_COLOR)"
 
 .PHONY: bonus all clean fclean re
 
