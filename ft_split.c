@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 14:20:34 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/22 23:20:38 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/28 15:01:45 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char	**ft_free(char **strings)
 		i++;
 	}
 	free(strings);
-	return (strings);
+	return (0);
 }
 
 static	int	len_to_extract(char const *s, char c)

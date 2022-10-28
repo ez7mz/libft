@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 17:43:59 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/13 17:45:38 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/28 15:07:20 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	if (!s)
-		return ((void)0);
+		return (0);
 	i = 0;
 	while (s[i])
 	{
