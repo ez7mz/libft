@@ -6,18 +6,15 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 17:50:01 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/26 01:28:21 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/29 17:09:39 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
-# include <fcntl.h>
 
 typedef struct s_list
 {

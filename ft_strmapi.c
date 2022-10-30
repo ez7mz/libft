@@ -6,7 +6,7 @@
 /*   By: hmesrar <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 17:18:44 by hmesrar           #+#    #+#             */
-/*   Updated: 2022/10/28 15:24:35 by hmesrar          ###   ########.fr       */
+/*   Updated: 2022/10/30 12:05:29 by hmesrar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		len;
 	int		i;
 
-	if (!s)
+	if (!s || !f)
 		return (0);
 	len = ft_strlen(s);
 	i = 0;

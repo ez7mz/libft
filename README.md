@@ -1,4 +1,11 @@
-<h1>Part1 : libc functions</h1>
-<p><br /><input type="checkbox" checked/>&ensp; isalpha<br /><input type="checkbox" checked/>&ensp; isdigit<br /><input type="checkbox" checked/>&ensp; isalnum<br /><input type="checkbox" checked/>&ensp; isascii<br /><input type="checkbox" checked/>&ensp; isprint<br /><input type="checkbox" checked/>&ensp; strlen<br /><input type="checkbox" checked/>&ensp; memset<br /><input type="checkbox" checked/>&ensp; bzero<br /><input type="checkbox" checked/>&ensp; memcpy<br /><input type="checkbox" checked/>&ensp; memmove<br /><input type="checkbox" checked/>&ensp; strlcpy<br /><input type="checkbox" checked/>&ensp; strlcat<br /><input type="checkbox" checked/>&ensp; toupper<br /><input type="checkbox" checked/>&ensp; tolower<br /><input type="checkbox" checked/>&ensp; strchr<br /><input type="checkbox" checked/>&ensp; strrchr<br /><input type="checkbox" checked/>&ensp; strncmp<br /><input type="checkbox" checked/>&ensp; memchr<br /><input type="checkbox" checked/>&ensp; memcmp<br /><input type="checkbox"/>&ensp; strnstr<br /><input type="checkbox" checked/>&ensp; atoi<br /><input type="checkbox" checked/>&ensp; calloc<br /><input type="checkbox" checked/>&ensp; strdup</p>
-<h1>Part2 : Additional functions</h1>
-<p><br /><input type="checkbox" />&ensp; ft_substr<br /><input type="checkbox" />&ensp; ft_strjoin<br /><input type="checkbox" />&ensp; ft_split<br /><input type="checkbox" />&ensp; ft_strtrim<br /><input type="checkbox" />&ensp; ft_itoa<br /><input type="checkbox" />&ensp; ft_strmapi<br /><input type="checkbox" />&ensp; ft_striteri<br /><input type="checkbox" />&ensp; ft_putchar_fd<br /><input type="checkbox" />&ensp; ft_putstr_fd<br /><input type="checkbox" />&ensp; ft_putendl_fd<br /><input type="checkbox" />&ensp; ft_putnbr_fd</p>
+# Libft Project
+
+---
+
+C programming can be very tedious when one doesn’t have access to the highly useful
+standard functions. This project is about understanding the way these functions work,
+implementing and learning to use them. Your will create your own library. It will be
+helpful since you will use it in your next C school assignments.
+Take the time to expand your libft throughout the year. However, when working
+on a new project, don’t forget to ensure the functions used in your library are allowed in
+the project guidelines.
